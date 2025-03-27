@@ -1,15 +1,15 @@
 // Classe principal que toca músicas
 class PlayMusica {
-    private StreamingService service;
+    private StreamingService servico;
     private Logger logger;
 
-    public PlayMusica(StreamingService service) {
-        this.service = service;
-        this.logger = new Logger(); // SRP: MusicPlayer não cuida dos logs, usa a classe Logger.
+    public PlayMusica(StreamingService servico) {
+        this.servico = servico;
+        this.logger = new Logger();
     }
 
-    public void play(String song) {
-        service.playSong(song);
-        logger.log("Música tocada: " + song + " no " + service.getClass().getSimpleName());
+    public void play(String som) {
+        servico.playSong(som);
+        logger.log("Música tocada: " + som + " no " + servico.getClass().getSimpleName());
     }
 }

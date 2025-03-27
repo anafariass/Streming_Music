@@ -1,6 +1,7 @@
-// Implementação do serviço de streaming Spotify
+
+
 class Spotify implements StreamingService {
-    public void playSong(String song) {
-        System.out.println("🎵 Tocando no Spotify: " + song);
+    public void playSong(String som) {
+        System.out.println("🎵 Tocando no Spotify: " + som);
     }
 }

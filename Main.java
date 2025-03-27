@@ -1,19 +1,18 @@
-// Classe Main para testar nosso código
 public class Main {
     public static void main(String[] args) {
-        // Escolhendo o serviço de streaming via Factory Method
+        //Escolhendo serviços de streaming
         StreamingService spotify = StreamingServiceFactory.getService("Spotify");
         StreamingService youtubeMusic = StreamingServiceFactory.getService("YouTubeMusic");
         StreamingService deezer = StreamingServiceFactory.getService("Deezer");
 
-        // Criando players para cada serviço
+        //criando players de musica
         PlayMusica player1 = new PlayMusica(spotify);
         PlayMusica player2 = new PlayMusica(youtubeMusic);
         PlayMusica player3 = new PlayMusica(deezer);
 
-        // Tocando músicas em diferentes plataformas
-        player1.play("Shape of You");
-        player2.play("Blinding Lights");
+        //tocando musicas em diferentes plataformas
+        player1.play("Californication");
+        player2.play("Espera pra ver");
         player3.play("Bohemian Rhapsody");
     }
 }

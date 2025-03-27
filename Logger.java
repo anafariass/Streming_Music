@@ -1,6 +1,6 @@
-// Classe responsável apenas por registrar logs (SRP aplicado)
+// (SRP aplicado)
 class Logger {
-    void log(String message) {
-        System.out.println("[LOG] " + message);
+    void log(String msg) {
+        System.out.println("[LOG] " + msg);
     }
 }
