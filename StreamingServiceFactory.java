@@ -1,13 +1,13 @@
 class StreamingServiceFactory {
-    public static StreamingService getService(String type) {
-        if (type.equalsIgnoreCase("Spotify")) {
+    public static StreamingService getService(String tipo) {
+        if (tipo.equalsIgnoreCase("Spotify")) {
             return new Spotify();
-        } else if (type.equalsIgnoreCase("YouTubeMusic")) {
+        } else if (tipo.equalsIgnoreCase("YouTubeMusic")) {
             return new YouTubeMusic();
-        } else if (type.equalsIgnoreCase("Deezer")) {
+        } else if (tipo.equalsIgnoreCase("Deezer")) {
             return new Deezer();
         } else {
-            throw new IllegalArgumentException("Serviço de streaming desconhecido: " + type);
+            throw new IllegalArgumentException("Serviço de streaming desconhecido: " + tipo);
         }
     }
 }
